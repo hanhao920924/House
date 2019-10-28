@@ -22,7 +22,6 @@ public class StreetServiceImpl implements StreetService {
     @Override
     public List<Street> getStreetByDistrictId(Integer disstrictId) {
         if(disstrictId ==null){
-            System.out.println(222);
             return null;
         }
         StreetExample streetExample = new StreetExample();
