@@ -21,6 +21,9 @@ public class StreetServiceImpl implements StreetService {
 
     @Override
     public List<Street> getStreetByDistrictId(Integer disstrictId) {
+        if(disstrictId ==null){
+            return null;
+        }
         StreetExample streetExample = new StreetExample();
         StreetExample.Criteria criteria = streetExample.createCriteria();
         criteria.andDistrictIdEqualTo(disstrictId);
